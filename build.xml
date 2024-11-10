@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="BankManagement System" default="default" basedir="." xmlns:fx="javafx:com.sun.javafx.tools.ant">
+    <description>BankManagement System.</description>
+    <import file="nbproject/build-impl.xml"/>
+  
+
+   
+</project>
