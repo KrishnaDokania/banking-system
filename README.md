@@ -112,12 +112,4 @@ The Online Banking System is a web-based application that allows users to perfor
 5. **Check Balance**: Users can view the current balance of their accounts.
 6. **View Transaction History**: Users can see the history of all their transactions.
 
-# Contributing
-We welcome contributions! Please fork this repository, create a feature branch, and submit a pull request.
-
-# License
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
-
----
-
-If you need any more details or modifications, just let me know! 😊
+ 
