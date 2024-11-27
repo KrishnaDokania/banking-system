@@ -1,64 +1,123 @@
-# Bank-Management-System
+ 
 
-This is a Bank Management System Database Project.
+# Online Banking System
 
+ Overview
+The Online Banking System is a web-based application that allows users to perform banking transactions and manage their accounts online. This system facilitates various banking activities such as account creation, balance inquiries, fund transfers, transaction history, and more, all from the convenience of a web browser. 
 
+## Features
+- **User Registration and Authentication**
+  - Secure user registration and login functionality.
+  - Password encryption for enhanced security.
+- **Account Management**
+  - Create and manage multiple accounts.
+  - Update user profiles.
+- **Transactions**
+  - Deposit and withdraw funds.
+  - Transfer funds between accounts.
+  - View transaction history.
+- **Balance Inquiry**
+  - Check real-time account balances.
+- **User Dashboard**
+  - Comprehensive dashboard displaying account summaries and recent transactions.
+- **Notifications**
+  - Email notifications for important account activities.
 
-Abstract: The main aim of Bank Management Mini DBMS project is to keep record of customer transactions in the bank. 
+## Technologies Used
+- **Frontend**
+  - HTML, CSS, JavaScript
+  - React.js
+- **Backend**
+  - Node.js
+  - Express.js
+- **Database**
+  - MySQL
+- **Authentication**
+  - JWT (JSON Web Tokens)
+- **Additional Tools**
+  - Docker for containerization
+  - Git for version control
 
-We aim to demonstrate the use of create, read, update and delete MySQL operations through this project.
+ # Installation
 
-Firstly, employee registration is done in the concern bank branch. 
+# Prerequisites
+- Node.js
+- MySQL
+- Docker (optional, for containerization)
 
-Branch employee creates customer account in the bank, then customer can credit amount, debit amount and check balance. 
+ # Steps
+ 
+1. **Set Up Database**
+   - Create a MySQL database:
+     ```sql
+     CREATE DATABASE online_banking_system;
+     ```
+   - Update `config/db.js` with your MySQL credentials.
 
-Customer can even use different services like insurance, loan, bill payments etc.
+2. **Run Migrations**
+   - Use a migration tool or manually create the necessary tables using SQL scripts provided in the `migrations` folder.
 
+3. **Start the Server**
+   ```sh
+   npm run dev
+   ```
 
+4. **Run the Client**
+   ```sh
+   cd client
+   npm start
+   ```
 
+ # Database Schema
+- **Users**
+  ```sql
+  CREATE TABLE users (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      username VARCHAR(50) UNIQUE NOT NULL,
+      password VARCHAR(255) NOT NULL,
+      email VARCHAR(100) UNIQUE NOT NULL,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  );
+  ```
 
-Modules:
+ *Accounts**
+  ```sql
+  CREATE TABLE accounts (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      user_id INT,
+      account_number VARCHAR(20) UNIQUE NOT NULL,
+      balance DECIMAL(10, 2) DEFAULT 0.00,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      FOREIGN KEY (user_id) REFERENCES users(id)
+  );
+  ```
 
+- **Transactions**
+  ```sql
+  CREATE TABLE transactions (
+      id INT AUTO_INCREMENT PRIMARY KEY,
+      account_id INT,
+      type ENUM('deposit', 'withdrawal', 'transfer') NOT NULL,
+      amount DECIMAL(10, 2) NOT NULL,
+      timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      FOREIGN KEY (account_id) REFERENCES accounts(id)
+  );
+  ```
 
-Bank Management Mini DBMS Project contains 4 modules:
+# Usage
+1. **Register a New User**: Users can sign up by providing their username, email, and password.
+2. **Log In**: Users log in with their credentials to access their account.
+3. **Manage Accounts**: Users can create and manage their accounts.
+4. **Perform Transactions**: Users can deposit, withdraw, and transfer funds.
+5. **Check Balance**: Users can view the current balance of their accounts.
+6. **View Transaction History**: Users can see the history of all their transactions.
 
+# Contributing
+We welcome contributions! Please fork this repository, create a feature branch, and submit a pull request.
 
+# License
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
-1.	Account Holder: As the name suggests, a record of customer details.
+---
 
-2.	Transaction: Transactions to be made by the customer (credit amount, debit etc).
-
-3.	Services: Additional services that customer may want like (insurance, loan etc.).
-
-4.	Branch/Employee : Manager/Employee details of the concern bank.
-
-
-
-
-SOFTWARE REQUIREMENTS:
-
-
-
-•	Operating system 		: 	Windows XP/7/10.
-
-•	Language		       	:	  Java ( Install JDK 8 version)
-
-•	IDE				          :	  Netbeans 8.2 / Eclipse
-
-•	Database			      :	  MYSQL (Install XAMPP)
-
-
-
-
-
-
-Technologies used:
-
-
-
-•	JavaFX
-
-•	Mysql
-
-
-
+If you need any more details or modifications, just let me know! 😊
