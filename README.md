@@ -39,8 +39,7 @@ The Online Banking System is a web-based application that allows users to perfor
   - Git for version control
 
  # Installation
-
-# Prerequisites
+ # Prerequisites
 - Node.js
 - MySQL
 - Docker (optional, for containerization)
@@ -57,18 +56,11 @@ The Online Banking System is a web-based application that allows users to perfor
 2. **Run Migrations**
    - Use a migration tool or manually create the necessary tables using SQL scripts provided in the `migrations` folder.
 
- 
- 
-
  # Database Schema
-- **Users**
-   
-
- **Accounts**
- 
-
-- **Transactions**
-     sql
+-      **Users**
+       **Accounts**
+       **Transactions**
+        sql
  
 
 # Usage
@@ -78,5 +70,36 @@ The Online Banking System is a web-based application that allows users to perfor
 4. **Perform Transactions**: Users can deposit, withdraw, and transfer funds.
 5. **Check Balance**: Users can view the current balance of their accounts.
 6. **View Transaction History**: Users can see the history of all their transactions.
+
+**CODE STRUCTURE OF THE ONLINE BANKING SYSTEM
+               online-banking-system/
+├── backend/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   ├── com/
+│   │   │   │   │   ├── bank/
+│   │   │   │   │   │   ├── controller/
+│   │   │   │   │   │   │   └── AccountController.java
+│   │   │   │   │   │   ├── model/
+│   │   │   │   │   │   │   └── Account.java
+│   │   │   │   │   │   ├── repository/
+│   │   │   │   │   │   │   └── AccountRepository.java
+│   │   │   │   │   │   ├── service/
+│   │   │   │   │   │   │   └── AccountService.java
+│   │   │   │   │   │   └── Application.java
+│   │   │   ├── resources/
+│   │   │   │   ├── application.properties
+│   │   │   │   └── data.sql
+│   │   └── test/
+│   │       └── java/
+│   │           └── com/
+│   │               └── bank/
+│   │                   └── ApplicationTests.java
+│   ├── pom.xml
+├── README.md
+└── LICENSE
+
+
 
  
