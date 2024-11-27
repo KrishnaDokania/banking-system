@@ -30,23 +30,7 @@ The Online Banking System is a web-based application that allows users to perfor
 │   │               └── bank/
 │   │                   └── ApplicationTests.java
 │   ├── pom.xml
-├── frontend/
-│   ├── public/
-│   │   ├── index.html
-│   │   └── favicon.ico
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── AccountComponent.jsx
-│   │   │   └── TransactionComponent.jsx
-│   │   ├── App.js
-│   │   ├── index.js
-│   │   └── App.css
-│   ├── package.json
-├── docker/
-│   ├── Dockerfile.backend
-│   ├── Dockerfile.frontend
-│   ├── docker-compose.yml
-├── README.md
+ 
 └── LICENSE
 
 
