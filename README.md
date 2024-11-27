@@ -5,8 +5,7 @@
  Overview
 The Online Banking System is a web-based application that allows users to perform banking transactions and manage their accounts online. This system facilitates various banking activities such as account creation, balance inquiries, fund transfers, transaction history, and more, all from the convenience of a web browser. 
 
-
-online-banking-system/
+ online-banking-system/
 ├── backend/
 │   ├── src/
 │   │   ├── main/
@@ -49,6 +48,8 @@ online-banking-system/
 │   ├── docker-compose.yml
 ├── README.md
 └── LICENSE
+
+
 
 
 
