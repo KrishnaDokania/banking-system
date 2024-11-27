@@ -5,6 +5,53 @@
  Overview
 The Online Banking System is a web-based application that allows users to perform banking transactions and manage their accounts online. This system facilitates various banking activities such as account creation, balance inquiries, fund transfers, transaction history, and more, all from the convenience of a web browser. 
 
+
+online-banking-system/
+├── backend/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   ├── com/
+│   │   │   │   │   ├── bank/
+│   │   │   │   │   │   ├── controller/
+│   │   │   │   │   │   │   └── AccountController.java
+│   │   │   │   │   │   ├── model/
+│   │   │   │   │   │   │   └── Account.java
+│   │   │   │   │   │   ├── repository/
+│   │   │   │   │   │   │   └── AccountRepository.java
+│   │   │   │   │   │   ├── service/
+│   │   │   │   │   │   │   └── AccountService.java
+│   │   │   │   │   │   └── Application.java
+│   │   │   ├── resources/
+│   │   │   │   ├── application.properties
+│   │   │   │   └── data.sql
+│   │   └── test/
+│   │       └── java/
+│   │           └── com/
+│   │               └── bank/
+│   │                   └── ApplicationTests.java
+│   ├── pom.xml
+├── frontend/
+│   ├── public/
+│   │   ├── index.html
+│   │   └── favicon.ico
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── AccountComponent.jsx
+│   │   │   └── TransactionComponent.jsx
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   └── App.css
+│   ├── package.json
+├── docker/
+│   ├── Dockerfile.backend
+│   ├── Dockerfile.frontend
+│   ├── docker-compose.yml
+├── README.md
+└── LICENSE
+
+
+
 ## Features
 - **User Registration and Authentication**
   - Secure user registration and login functionality.
@@ -72,34 +119,7 @@ The Online Banking System is a web-based application that allows users to perfor
 6. **View Transaction History**: Users can see the history of all their transactions.
 
 **CODE STRUCTURE OF THE ONLINE BANKING SYSTEM
-               online-banking-system/
-├── backend/
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── java/
-│   │   │   │   ├── com/
-│   │   │   │   │   ├── bank/
-│   │   │   │   │   │   ├── controller/
-│   │   │   │   │   │   │   └── AccountController.java
-│   │   │   │   │   │   ├── model/
-│   │   │   │   │   │   │   └── Account.java
-│   │   │   │   │   │   ├── repository/
-│   │   │   │   │   │   │   └── AccountRepository.java
-│   │   │   │   │   │   ├── service/
-│   │   │   │   │   │   │   └── AccountService.java
-│   │   │   │   │   │   └── Application.java
-│   │   │   ├── resources/
-│   │   │   │   ├── application.properties
-│   │   │   │   └── data.sql
-│   │   └── test/
-│   │       └── java/
-│   │           └── com/
-│   │               └── bank/
-│   │                   └── ApplicationTests.java
-│   ├── pom.xml
-├── README.md
-└── LICENSE
-
+ 
 
 
  
